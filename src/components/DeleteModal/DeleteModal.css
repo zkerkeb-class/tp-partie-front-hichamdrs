@@ -1,0 +1,113 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    border: 4px solid #e74c3c;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 550px;
+    width: 90%;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 0 0 8px rgba(231, 76, 60, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    margin: 0 0 25px 0;
+    color: #e74c3c;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-content p {
+    margin: 15px 0;
+    color: #2C3E50;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.modal-content p strong {
+    color: #e74c3c;
+    font-weight: 900;
+}
+
+.warning-text {
+    color: #ff9800;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cancel {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    color: white;
+}
+
+.btn-confirm-delete {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
