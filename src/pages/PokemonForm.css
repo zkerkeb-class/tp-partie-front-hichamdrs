@@ -83,6 +83,7 @@
     font-weight: 600;
     transition: all 0.3s;
     background: rgba(255, 255, 255, 0.9);
+    color: #2C3E50;
 }
 
 .form-group input[type="text"]:focus,
@@ -120,6 +121,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    color: #2C3E50;
 }
 
 .type-checkbox input[type="checkbox"] {
